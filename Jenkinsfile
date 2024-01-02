@@ -11,8 +11,8 @@ pipeline{
                 // This step should not normally be used in your script. Consult the inline help for details.
                 withDockerRegistry(credentialsId: 'dockerhub', url: 'https://index.docker.io/v1/') {
                     // some block
-                    sh 'docker build -t thanhbinh8223/Jenkins-Docker-CI-CD-project:lastest .'
-                    sh 'docker push thanhbinh8223/Jenkins-Docker-CI-CD-project:lastest'
+                    bat 'docker build -t thanhbinh/Jenkins-Docker-CI-CD-project:lastest .'
+                    bat 'docker push thanhbinh/Jenkins-Docker-CI-CD-project:lastest'
                     
                 }
             }
